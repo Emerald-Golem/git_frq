@@ -2,6 +2,14 @@ import java.util.ArrayList;
 public class WeatherData {
     private ArrayList<Double> temperatures;
 
+    public WeatherData() {
+        temperatures = new ArrayList<>();
+    }
+
+    public void addTemperature(double temp) {
+        temperatures.add(temp);
+    }
+
     public void cleanData(double lower, double upper){
         for(int i = 0; i < temperatures.size(); i++){
             if(temperatures.get(i) < lower || temperatures.get(i) > upper){
@@ -24,5 +32,9 @@ public class WeatherData {
             }
         }
         return longest;
+    }
+
+    public static void main (String[] args) {
+
     }
 }
