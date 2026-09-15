@@ -48,6 +48,21 @@ public class WeatherData {
         rain.addTemperature(102.5);
         rain.cleanData(85, 120);
         System.out.println(rain.temperatures);
+        WeatherData weatherData = new WeatherData();
+        weatherData.addTemperature(100.5);
+        weatherData.addTemperature(98.5);
+        weatherData.addTemperature(102);
+        weatherData.addTemperature(103.9);
+        weatherData.addTemperature(87.5);
+        weatherData.addTemperature(105.2);
+        weatherData.addTemperature(90.3);
+        weatherData.addTemperature(94.8);
+        weatherData.addTemperature(109.1);
+        weatherData.addTemperature(102.1);
+        weatherData.addTemperature(107.4);
+        weatherData.addTemperature(93.2);
+        System.out.println(weatherData.longestHeatWave(100.5));
+        System.out.println(weatherData.longestHeatWave(95.2));
 
     }
 }
