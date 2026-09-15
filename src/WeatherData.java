@@ -35,14 +35,19 @@ public class WeatherData {
     }
 
     public static void main(String[] args) {
-        WeatherData weatherData = new WeatherData();
-        weatherData.addTemperature(90);
-        weatherData.addTemperature(80);
-        weatherData.addTemperature(70);
-        weatherData.addTemperature(60);
-        weatherData.addTemperature(51);
-        weatherData.cleanData(70, 80);
-        System.out.println(weatherData.longestHeatWave(70));
+        WeatherData rain = new WeatherData();
+        rain.addTemperature(99.1);
+        rain.addTemperature(142);
+        rain.addTemperature(85);
+        rain.addTemperature(85.1);
+        rain.addTemperature(84.6);
+        rain.addTemperature(94.3);
+        rain.addTemperature(124.9);
+        rain.addTemperature(98);
+        rain.addTemperature(101);
+        rain.addTemperature(102.5);
+        rain.cleanData(85, 120);
+        System.out.println(rain.temperatures);
 
     }
 }
