@@ -40,7 +40,7 @@ public class WeatherData {
         weatherData.addTemperature(80);
         weatherData.addTemperature(70);
         weatherData.addTemperature(60);
-        weatherData.addTemperature(50);
+        weatherData.addTemperature(51);
         weatherData.cleanData(70, 80);
         System.out.println(weatherData.longestHeatWave(70));
 
