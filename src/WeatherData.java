@@ -23,7 +23,7 @@ public class WeatherData {
         int longest = 0;
         for (int i = 0; i < temperatures.size(); i++) {
             int current = 0;
-            while (temperatures.get(i) >= threshold && i < temperatures.size()) {
+            while (i < temperatures.size() && temperatures.get(i) >= threshold) {
                 current++;
                 i++;
             }
@@ -34,7 +34,15 @@ public class WeatherData {
         return longest;
     }
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
+        WeatherData weatherData = new WeatherData();
+        weatherData.addTemperature(90);
+        weatherData.addTemperature(80);
+        weatherData.addTemperature(70);
+        weatherData.addTemperature(60);
+        weatherData.addTemperature(50);
+        weatherData.cleanData(70, 80);
+        System.out.println(weatherData.longestHeatWave(70));
 
     }
 }
